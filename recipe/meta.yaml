@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Ragna-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ragna-{{ version }}.tar.gz
   sha256: d62cab74fdb9d90c870466f0243e6549cb7d6fe0cd0b8428058c6f661d4c8cb4
 build:
   noarch: python
