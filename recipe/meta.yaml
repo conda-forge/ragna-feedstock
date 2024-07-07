@@ -1,14 +1,13 @@
 {% set name = "Ragna" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Ragna-{{ version }}.tar.gz
-  sha256: c4da922760b2ab55cb5b6c9bbe010768ad0f7e1d1f7e0f07fbf9ce6ce42ee84b
-
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ragna-{{ version }}.tar.gz
+  sha256: d62cab74fdb9d90c870466f0243e6549cb7d6fe0cd0b8428058c6f661d4c8cb4
 build:
   noarch: python
   entry_points:
