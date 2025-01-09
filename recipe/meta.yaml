@@ -6,23 +6,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ragna-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ragna-{{ version }}.tar.gz
   sha256: d62cab74fdb9d90c870466f0243e6549cb7d6fe0cd0b8428058c6f661d4c8cb4
 build:
   noarch: python
   entry_points:
     - ragna = ragna.__main__:app
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=45
     - setuptools-scm >=6.2
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - aiofiles
     - emoji
     - fastapi
@@ -52,6 +52,7 @@ test:
     - ragna --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://ragna.chat/
